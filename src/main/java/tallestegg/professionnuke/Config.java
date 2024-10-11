@@ -19,7 +19,7 @@ public class Config {
     public static class CommonConfig {
         public final ModConfigSpec.ConfigValue<List<? extends String>> professionBlacklist;
         public CommonConfig(ModConfigSpec.Builder builder) {
-            professionBlacklist = builder.defineListAllowEmpty("Professions to be nuked", ImmutableList.of(""), () -> "", obj -> true);
+            professionBlacklist = builder.comment("To deactivate a villager profession, simply add the profession name to this list. If you wanted to remove librarians for example, simply add \"librarian\". If you wanted to add multiple professions to be removed, simply add a comma in between entries.").defineListAllowEmpty("Professions to be nuked", ImmutableList.of(""), () -> "", obj -> true);
         }
     }
 }
