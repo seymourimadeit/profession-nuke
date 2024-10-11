@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "tallestegg.profession_nuke.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "profession-nuke.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
