@@ -1,10 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "tallestegg.profession_nuke.mixin",
+  "package": "tallestegg.professionnuke.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "profession-nuke.refmap.json",
   "mixins": [
+    "VillagerDataMixin",
+    "GoToPotentialJobSiteMixin"
   ],
   "client": [
   ],
