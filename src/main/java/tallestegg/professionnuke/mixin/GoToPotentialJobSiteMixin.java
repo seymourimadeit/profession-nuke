@@ -28,8 +28,8 @@ public abstract class GoToPotentialJobSiteMixin extends Behavior<Villager> {
         super(entryCondition);
     }
 
-    @Inject(at = @At("RETURN"), method = "tick(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V", cancellable = true)
-    protected void tick(ServerLevel level, Villager owner, long gameTime, CallbackInfo ci) {
+    @Inject(at = @At("TAIL"), method = "checkExtraStartConditions(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;)Z", cancellable = true)
+    protected void checkExtraStartConditions(ServerLevel level, Villager owner, CallbackInfoReturnable<Boolean> cir) {
         GlobalPos jobSitePos = owner.getBrain().getMemory(MemoryModuleType.POTENTIAL_JOB_SITE).get();
         Optional.ofNullable(level.getLevel())
                 .flatMap(serverLevel -> serverLevel.getPoiManager().getType(jobSitePos.pos()))
