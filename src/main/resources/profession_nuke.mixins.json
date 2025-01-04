@@ -2,8 +2,8 @@
   "required": true,
   "minVersion": "0.8",
   "package": "tallestegg.professionnuke.mixin",
-  "compatibilityLevel": "JAVA_8",
-  "refmap": "profession-nuke.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "profession_nuke.refmap.json",
   "mixins": [
     "VillagerDataMixin",
     "GoToPotentialJobSiteMixin"

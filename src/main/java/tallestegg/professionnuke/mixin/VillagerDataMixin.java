@@ -14,9 +14,13 @@ import tallestegg.professionnuke.Config;
 
 @Mixin(VillagerData.class)
 public class VillagerDataMixin {
-    @Shadow @Final private VillagerType type;
+    @Shadow
+    @Final
+    private VillagerType type;
 
-    @Shadow @Final private int level;
+    @Shadow
+    @Final
+    private int level;
 
     @Inject(at = @At("RETURN"), method = "setProfession", cancellable = true)
     public void setProfession(VillagerProfession profession, CallbackInfoReturnable<VillagerData> cir) {
